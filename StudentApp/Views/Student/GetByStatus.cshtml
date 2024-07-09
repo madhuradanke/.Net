@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using BOL;
+@using System.Collections.Generic;
+@{
+    List<Student> students = (List<Student>)ViewData["status"];
+    <ol>
+    @{
+        foreach(Student s in students)
+        {
+            <li>
+                    @s.student_id
+                    @s.student_name
+                    @s.Email
+                    @s.Mobile
+                    @s.Fees
+                    @s.Status
+                    @s.Address
+                    @s.admission_date
+            </li>
+        }
+    }
+    </ol>
+}
